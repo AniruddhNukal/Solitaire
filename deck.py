@@ -1,4 +1,4 @@
-#v3
+#v4
 
 import random
 from card import Card
@@ -24,6 +24,5 @@ class Main_Deck:
         super().__init__()
         for i in ['heart', 'spade', 'diamd', 'clove']:
             for j in range(1, 14):
-                self.contents.append(Card(i, j))
-                self.contents[-1].hidden = True
+                self.contents.append(Card(i, j).flip())
         random.shuffle(self.contents)

@@ -1,4 +1,4 @@
-#v3
+#v4
 
 class Card:
     def __init__(self, suit, value):
@@ -19,7 +19,7 @@ class Card:
             
     def __repr__(self):
         if self.hidden:
-            return '[card hidden]'
+            return '[hidden ]'
         else:
             return f'[{self.suit} {self.value}]'
         

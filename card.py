@@ -1,4 +1,4 @@
-#v2
+#v3
 
 class Card:
     def __init__(self, suit, value):
@@ -28,3 +28,4 @@ class Card:
             self.hidden = False
         else: 
             self.hidden = True
+        return self

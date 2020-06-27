@@ -1,4 +1,4 @@
-#v4
+#v5
 
 import random
 from card import Card
@@ -18,6 +18,9 @@ class Deck:
         
     def getremove(self, index):
         return self.contents.pop(index)
+    
+    def __len__(self):
+        return len(self.contents)
         
 class Main_Deck:
     def __init__(self):

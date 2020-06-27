@@ -1,3 +1,5 @@
+#v2
+
 class Card:
     def __init__(self, suit, value):
         self.suit = suit
@@ -20,3 +22,9 @@ class Card:
             return '[card hidden]'
         else:
             return f'[{self.suit} {self.value}]'
+        
+    def flip(self):
+        if self.hidden:
+            self.hidden = False
+        else: 
+            self.hidden = True

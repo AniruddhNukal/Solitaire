@@ -1,4 +1,4 @@
-#v4
+#v5
 
 class Card:
     def __init__(self, suit, value):
@@ -21,7 +21,7 @@ class Card:
         if self.hidden:
             return '[hidden ]'
         else:
-            return f'[{self.suit} {self.value}]'
+            return f'[{self.suit} {self.face}]'
         
     def flip(self):
         if self.hidden:

@@ -1,4 +1,4 @@
-#v5
+#v6
 
 import random
 from card import Card
@@ -17,14 +17,16 @@ class Deck:
         self.contents.pop(index)
         
     def getremove(self, index):
-        return self.contents.pop(index)
+        x = self.get(index)
+        self.contents.pop(index)
+        return x
     
     def __len__(self):
         return len(self.contents)
         
-class Main_Deck:
+class Main_Deck(Deck):
     def __init__(self):
-        super().__init__()
+        self.contents = []
         for i in ['heart', 'spade', 'diamd', 'clove']:
             for j in range(1, 14):
                 self.contents.append(Card(i, j).flip())

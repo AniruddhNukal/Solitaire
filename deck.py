@@ -1,9 +1,20 @@
+#v2
+
 import random
 from card import Card
 
 class Deck:
     def __init__(self):
         self.contents = []
+        
+    def add(self, card):
+        self.contents.append(card)
+        
+    def get(self, index):
+        return self.contents[index]
+    
+    def remove(self, index):
+        self.contents.pop(index)
         
 class Main_Deck:
     def __init__(self):
